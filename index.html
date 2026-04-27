@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarah Mitchell for City Council</title>
+  <meta name="description" content="Sarah Mitchell for Millbrook City Council. A Voice for Every Neighbor." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     TOP BAR — social links
+     Social URLs: config.js → social.*
+     ══════════════════════════════════════════════════════════ -->
+<div class="top-bar">
+  <div class="top-bar-social" id="topbar-social"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVIGATION
+     Links: config.js → nav
+     Name:  config.js → candidate.fullName / office
+     ══════════════════════════════════════════════════════════ -->
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#hero" class="nav-brand">
+      <span class="nav-brand-name"   id="nav-brand-name"></span>
+      <span class="nav-brand-office" id="nav-brand-office"></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links"></ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+     Photo:  config.js → photos.hero
+     Text:   config.js → hero.*, candidate.*, election.*
+     ══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Campaign hero">
+  <!--
+    ╔═══════════════════════════════════════════════╗
+    ║  HERO PHOTO → config.js → photos.hero        ║
+    ╚═══════════════════════════════════════════════╝
+  -->
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-stripe"></div>
+
+  <div class="hero-inner">
+
+    <!-- Left: candidate info -->
+    <div class="hero-content">
+      <div class="hero-eyebrow" id="hero-eyebrow"></div>
+      <h1 class="hero-name"   id="hero-name"></h1>
+      <p  class="hero-office" id="hero-office"></p>
+      <p  class="hero-slogan" id="hero-slogan"></p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" id="hero-cta-primary"   href="#get-involved"></a>
+        <a class="btn btn-outline" id="hero-cta-secondary" href="#about"></a>
+      </div>
+    </div>
+
+    <!-- Right: countdown card -->
+    <div class="hero-countdown-card">
+      <h3>Days Until Election Day</h3>
+      <div class="countdown" id="countdown" aria-live="polite"></div>
+      <p class="election-date" id="hero-election-date"></p>
+      <a class="btn btn-primary" href="#get-involved" style="width:100%;justify-content:center">
+        Vote Sarah Mitchell →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT
+     Photo:  config.js → photos.candidateHeadshot
+     Text:   config.js → about.*, candidate.*
+     ══════════════════════════════════════════════════════════ -->
+<section id="about" aria-label="About the candidate">
+  <div class="section-inner">
+
+    <div class="about-grid">
+
+      <!-- Photo column -->
+      <div class="about-photo-wrap fade-in">
+        <div class="about-photo-frame">
+          <!--
+            ╔══════════════════════════════════════════════════════╗
+            ║  HEADSHOT → config.js → photos.candidateHeadshot    ║
+            ╚══════════════════════════════════════════════════════╝
+          -->
+          <img id="candidate-headshot" src="" alt="Candidate photo" loading="lazy" />
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-number">2025</div>
+          <div class="about-badge-label">Election Year</div>
+        </div>
+      </div>
+
+      <!-- Text column -->
+      <div class="about-text fade-in">
+        <span class="section-eyebrow">The Candidate</span>
+        <h2 class="section-title" id="about-title"></h2>
+        <p  class="section-subtitle" id="about-subtitle"></p>
+
+        <!-- Paragraphs from config.js → about.paragraphs -->
+        <div id="about-paragraphs"></div>
+
+        <!-- Stats from config.js → about.stats -->
+        <div class="about-stats" id="about-stats"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ISSUES / PLATFORM
+     Text: config.js → issues.*
+     ══════════════════════════════════════════════════════════ -->
+<section id="issues" aria-label="Issues and platform">
+  <div class="section-inner">
+
+    <span class="section-eyebrow fade-in">The Platform</span>
+    <h2 class="section-title fade-in" id="issues-title"></h2>
+    <p  class="section-subtitle fade-in" id="issues-subtitle"></p>
+
+    <!-- Cards built from config.js → issues.items -->
+    <div class="issues-grid" id="issues-grid"></div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ENDORSEMENTS
+     Text: config.js → endorsements.*
+     ══════════════════════════════════════════════════════════ -->
+<section id="endorsements" aria-label="Endorsements">
+  <div class="section-inner">
+
+    <span class="section-eyebrow fade-in">Community Support</span>
+    <h2 class="section-title fade-in" id="endorsements-title"></h2>
+    <p  class="section-subtitle fade-in" id="endorsements-subtitle"></p>
+
+    <!-- Quote cards from config.js → endorsements.quotes -->
+    <div class="quotes-grid" id="quotes-grid"></div>
+
+    <!-- Organization endorsements -->
+    <div class="org-endorsements fade-in">
+      <h3>Endorsed By</h3>
+      <div class="org-list" id="org-list"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     EVENTS
+     Text: config.js → events.*
+     Set events.items to [] in config to hide this section
+     ══════════════════════════════════════════════════════════ -->
+<section id="events" aria-label="Upcoming events">
+  <div class="section-inner">
+
+    <span class="section-eyebrow fade-in">On the Trail</span>
+    <h2 class="section-title fade-in" id="events-title"></h2>
+    <p  class="section-subtitle fade-in" id="events-subtitle"></p>
+
+    <!-- Event cards from config.js → events.items -->
+    <div class="events-list" id="events-list"></div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     GET INVOLVED
+     Volunteer/Donate: config.js → getInvolved.*
+     Contact form submissions → getInvolved.formspreeEndpoint
+     ══════════════════════════════════════════════════════════ -->
+<section id="get-involved" aria-label="Get involved">
+  <div class="section-inner">
+
+    <span class="section-eyebrow fade-in">Join the Campaign</span>
+    <h2 class="section-title fade-in" id="get-involved-title"></h2>
+    <p  class="section-subtitle fade-in" id="get-involved-subtitle"></p>
+
+    <!-- Volunteer + Donate cards -->
+    <div class="get-involved-grid fade-in">
+
+      <div class="involved-card volunteer">
+        <div class="involved-bg-letter">V</div>
+        <h3 id="volunteer-title"></h3>
+        <p  id="volunteer-desc"></p>
+        <a class="btn btn-gold" id="volunteer-btn" href="#">Sign Up →</a>
+      </div>
+
+      <div class="involved-card donate">
+        <div class="involved-bg-letter">$</div>
+        <h3 id="donate-title"></h3>
+        <p  id="donate-desc"></p>
+        <a class="btn btn-navy" id="donate-btn" href="#">Donate Now →</a>
+        <p class="disclaimer" id="donate-disclaimer"></p>
+      </div>
+
+    </div>
+
+    <!-- Contact form -->
+    <div class="setup-note" id="contact-setup-note">
+      <strong>📋 One-time Formspree Setup</strong>
+      <ol>
+        <li>Go to <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a> → create free account.</li>
+        <li>Click <strong>+ New Form</strong> → name it <em>"Campaign Contact"</em>.</li>
+        <li>Copy your endpoint: <code>https://formspree.io/f/xxxxxxxx</code></li>
+        <li>Open <code>js/config.js</code> → paste into <code>getInvolved.formspreeEndpoint</code>.</li>
+        <li>This box disappears automatically once configured.</li>
+      </ol>
+    </div>
+
+    <div class="contact-form-wrap fade-in">
+      <h3 class="contact-form-title">Send Us a Message</h3>
+      <p  class="contact-form-sub">Questions, ideas, or want to connect with the campaign? We'd love to hear from you.</p>
+
+      <form id="contact-form" novalidate>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Your Name *</label>
+            <input class="form-input" type="text" id="contact-name" name="name"
+                   placeholder="First &amp; Last Name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email *</label>
+            <input class="form-input" type="email" id="contact-email" name="email"
+                   placeholder="your@email.com" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="contact-phone">Phone</label>
+            <input class="form-input" type="tel" id="contact-phone" name="phone"
+                   placeholder="Optional" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-interest">I Want To</label>
+            <select class="form-select" id="contact-interest" name="interest">
+              <option value="" disabled selected>— Select one —</option>
+              <option>Volunteer</option>
+              <option>Put Up a Yard Sign</option>
+              <option>Host a House Party</option>
+              <option>Ask a Question</option>
+              <option>Share a Story</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contact-message">Message *</label>
+          <textarea class="form-textarea" id="contact-message" name="message"
+                    placeholder="Tell us how you'd like to get involved or ask us anything…"
+                    required></textarea>
+        </div>
+
+        <button class="btn-submit" type="submit" id="contact-submit">
+          Send Message →
+        </button>
+      </form>
+
+      <div class="form-status" id="contact-status" role="alert" aria-live="polite"></div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+     Text: config.js → footer.*, candidate.*
+     ══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name"   id="footer-name"></div>
+    <div class="footer-office" id="footer-office"></div>
+    <div class="footer-social" id="footer-social"></div>
+    <p class="footer-disclaimer" id="footer-disclaimer"></p>
+    <p class="footer-copy"       id="footer-copy"></p>
+  </div>
+</footer>
+
+<!-- Scripts — config must load before main -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
