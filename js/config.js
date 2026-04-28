@@ -57,7 +57,7 @@ const SITE = {
   //   2. Update the path below, e.g. "images/candidate.jpg"
 
   photos: {
-    hero:          "images/hero.jpg",        // Full-width hero background
+    hero:          "images/coming-soon.jpg",        // Full-width hero background
     candidateHeadshot: "images/coming-soon.jpg",// Headshot in About section
     about:         "images/about.jpg",       // Second about section photo (optional)
   },
