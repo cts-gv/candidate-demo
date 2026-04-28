@@ -58,7 +58,7 @@ const SITE = {
 
   photos: {
     hero:          "images/hero.jpg",        // Full-width hero background
-    candidateHeadshot: "images/headshot.jpg",// Headshot in About section
+    candidateHeadshot: "images/coming-soon.jpg",// Headshot in About section
     about:         "images/about.jpg",       // Second about section photo (optional)
   },
 
