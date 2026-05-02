@@ -71,7 +71,7 @@ const SITE = {
   hero: {
     eyebrow:   "Vote",                       // Small text above name
     heading:   "Sarah Mitchell",             // Main headline — usually candidate name
-    subheading:"for Millbrook City Council", // Office line
+    subheading:"for Grandview City Council", // Office line
     caption:   "A Voice for Every Neighbor", // Slogan
     ctaPrimary:   { label: "Get Involved",   href: "#volunteer" },
     ctaSecondary: { label: "Learn More",     href: "#about" },
@@ -80,18 +80,18 @@ const SITE = {
   // ── ABOUT SECTION ────────────────────────────────────────
   about: {
     title:    "Meet Sarah",
-    subtitle: "Millbrook resident, community leader, and your neighbor.",
+    subtitle: "Grandview resident, community leader, and your neighbor.",
 
     // ↓ Replace with real candidate bio
     paragraphs: [
-      "Sarah Mitchell has called Millbrook home for over 20 years. As a small business owner, PTA president, and longtime volunteer with the Millbrook Food Bank, she understands the challenges everyday families face — because she faces them too.",
+      "Sarah Mitchell has called Grandview home for over 20 years. As a small business owner, PTA president, and longtime volunteer with the Grandview Food Bank, she understands the challenges everyday families face — because she faces them too.",
       "After watching city decisions made without input from residents like us, Sarah decided it was time to step up. She believes city government should be transparent, accessible, and genuinely accountable to the people it serves.",
       "Sarah will bring fresh energy and a practical, problem-solving approach to City Council — fighting for better roads, safer neighborhoods, local economic opportunity, and a city hall that actually listens."
     ],
 
     // Quick facts shown as a row of stats
     stats: [
-      { number: "20+", label: "Years in Millbrook" },
+      { number: "20+", label: "Years in Grandview" },
       { number: "3",   label: "Kids in Local Schools" },
       { number: "100+", label: "Doors Knocked" },
       { number: "0",   label: "Special Interests" },
