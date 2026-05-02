@@ -15,7 +15,7 @@ const SITE = {
     fullName:   "Sarah Mitchell",
     office:     "City Council",
     district:   "District 4",             // ← update or set "" to hide
-    city:       "Millbrook",
+    city:       "Grandview",
     state:      "Washington",
     party:      "",                        // ← e.g. "Democrat" / "Republican" / "" to hide
     slogan:     "A Voice for Every Neighbor",
